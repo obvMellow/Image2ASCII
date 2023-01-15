@@ -15,6 +15,7 @@ A command line tool that converts images to ASCII art.
 - [.Net Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 #### Steps
+- Clone this repository
 - Open the solution file
 - Compile it in relese configuration
 - Done!
