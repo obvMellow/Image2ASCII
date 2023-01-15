@@ -27,3 +27,4 @@ Optionally you can create a setup file with the publish wizard.
 - Better error handling
 - Multiple file support
 - Multiplatform support
+- UI version
