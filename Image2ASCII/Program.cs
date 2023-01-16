@@ -19,14 +19,18 @@ namespace Image2ASCII
             }
 
             string input;
+            float sizeMultiplier;
             if (args.Length == 0)
             {
                 Console.Write("\nEnter the path to the image: ");
                 input = Console.ReadLine();
+                Console.Write("Enter the size multiplier (according to console size): ");
+                sizeMultiplier = float.Parse(Console.ReadLine());
             }
             else
             {
                 input = args[0];
+                sizeMultiplier = 1;
             }
 
             if (!File.Exists(input) || input == "")
@@ -37,7 +41,7 @@ namespace Image2ASCII
                 return;
             }
 
-            PrintlnColored("[INFO] Resizing image...", ConsoleColor.Yellow, (1, 5));
+            PrintlnColored("\n[INFO] Resizing image...", ConsoleColor.Yellow, (1, 5));
 
             var originalImage = new Bitmap(input);
 
@@ -49,14 +53,14 @@ namespace Image2ASCII
             if (imageAspectRatio > consoleAspectRatio)
             {
                 // Image is wider than console, so scale based on width
-                newWidth = Console.WindowWidth;
-                newHeight = (int)(Console.WindowWidth / imageAspectRatio);
+                newWidth = (int)(Console.WindowWidth * sizeMultiplier);
+                newHeight = (int)(Console.WindowWidth / imageAspectRatio * sizeMultiplier);
             }
             else
             {
                 // Image is taller than console, so scale based on height
-                newWidth = (int)(Console.WindowHeight * imageAspectRatio);
-                newHeight = Console.WindowHeight;
+                newWidth = (int)(Console.WindowHeight * imageAspectRatio * sizeMultiplier);
+                newHeight = (int)(Console.WindowHeight * sizeMultiplier);
             }
 
             Bitmap scaledImage = new Bitmap(originalImage, new Size(newWidth, newHeight));
@@ -101,8 +105,11 @@ namespace Image2ASCII
             if (File.Exists("output.txt"))
                 File.Delete("output.txt");
 
-            Console.WriteLine();
-            Console.Write(stringBuilder.ToString());
+            if (sizeMultiplier <= 1)
+            {
+                Console.WriteLine();
+                Console.Write(stringBuilder.ToString());
+            }
 
             var text = File.CreateText("output.txt");
 
