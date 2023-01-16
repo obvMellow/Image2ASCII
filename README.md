@@ -17,7 +17,7 @@ A command line tool that converts images to ASCII art.
 #### Steps
 - Clone this repository
 - Open the solution file
-- Compile it in relese configuration
+- Compile it in "Release" configuration
 - Done!
 
 Optionally you can create a setup file with the publish wizard.
