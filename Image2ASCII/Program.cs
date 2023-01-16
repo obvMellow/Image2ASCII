@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -123,6 +124,7 @@ namespace Image2ASCII
                 text.Close();
 
                 PrintlnColored($"\n[SUCCESS] Created the output int 'output{outputIndex}.txt'", ConsoleColor.Green, (2, 9));
+                Process.Start("CMD.exe", $"/C start output{outputIndex}.txt");
 
                 Console.ReadKey(true);
 
