@@ -12,7 +12,7 @@ A command line tool that converts images to ASCII art.
 
 #### Dependencies
 - [Visual Studio 2022 or newer](https://visualstudio.microsoft.com)
-- [.Net Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.Net Framework 4.8 SDK](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 #### Steps
 - Clone this repository
