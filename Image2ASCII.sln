@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image2ASCII", "Image2ASCII\Image2ASCII.csproj", "{37FDA49B-896F-4BDE-8F11-633E62BB91CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image2ASCII UI", "Image2ASCII UI\Image2ASCII UI.csproj", "{176B5B7E-A1F0-4DE9-A470-BD8E08FF913E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{37FDA49B-896F-4BDE-8F11-633E62BB91CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37FDA49B-896F-4BDE-8F11-633E62BB91CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37FDA49B-896F-4BDE-8F11-633E62BB91CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{176B5B7E-A1F0-4DE9-A470-BD8E08FF913E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176B5B7E-A1F0-4DE9-A470-BD8E08FF913E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176B5B7E-A1F0-4DE9-A470-BD8E08FF913E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176B5B7E-A1F0-4DE9-A470-BD8E08FF913E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
