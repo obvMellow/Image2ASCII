@@ -28,38 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            path = new TextBox();
-            label1 = new Label();
             multiplier = new TextBox();
             label2 = new Label();
             button1 = new Button();
             label3 = new Label();
+            button2 = new Button();
             SuspendLayout();
-            // 
-            // path
-            // 
-            path.Location = new Point(270, 178);
-            path.Name = "path";
-            path.PlaceholderText = "path/to/image.png";
-            path.Size = new Size(235, 23);
-            path.TabIndex = 0;
-            path.Tag = "input";
-            path.TextChanged += textBox1_TextChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(270, 160);
-            label1.Name = "label1";
-            label1.Size = new Size(67, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Image Path";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
-            label1.Click += label1_Click;
             // 
             // multiplier
             // 
-            multiplier.Location = new Point(270, 222);
+            multiplier.Location = new Point(338, 224);
             multiplier.Name = "multiplier";
             multiplier.Size = new Size(30, 23);
             multiplier.TabIndex = 2;
@@ -71,7 +49,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(270, 204);
+            label2.Location = new Point(338, 206);
             label2.Name = "label2";
             label2.Size = new Size(81, 15);
             label2.TabIndex = 3;
@@ -93,36 +71,44 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(255, 44);
+            label3.Location = new Point(266, 46);
             label3.Name = "label3";
             label3.Size = new Size(265, 59);
             label3.TabIndex = 6;
             label3.Text = "Image2ASCII";
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(338, 162);
+            button2.Name = "button2";
+            button2.Size = new Size(90, 31);
+            button2.TabIndex = 7;
+            button2.Text = "Select Image";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(768, 465);
+            Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(multiplier);
-            Controls.Add(label1);
-            Controls.Add(path);
-            Name = "Image2ASCII";
+            Name = "Form1";
             Text = "Image2ASCII";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox path;
-        private Label label1;
         private TextBox multiplier;
         private Label label2;
         private Button button1;
         private Label label3;
+        private Button button2;
     }
 }

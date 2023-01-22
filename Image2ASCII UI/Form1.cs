@@ -6,6 +6,7 @@ namespace Image2ASCII_UI
     public partial class Form1 : Form
     {
         private const string brightnessMap = @".'`^,:;Il!i><~+_-?][}{1)(|\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
+        private string pathStr = "";
 
         public Form1()
         {
@@ -25,7 +26,7 @@ namespace Image2ASCII_UI
             if (File.Exists($"output.txt"))
                 File.Delete($"output.txt");
 
-            if (!File.Exists(path.Text))
+            if (!File.Exists(pathStr))
             {
                 MessageBox.Show("Cannot find the file specified.");
                 return;
@@ -43,7 +44,7 @@ namespace Image2ASCII_UI
             }
             multiplierInt = float.Parse(multiplier.Text);
 
-            Image image = Image.FromFile(path.Text);
+            Image image = Image.FromFile(pathStr);
             Bitmap scaledImage = new(image, new Size((int)(image.Width * multiplierInt), (int)(image.Height * multiplierInt)));
 
             float strecthFactor = 2f;
@@ -88,6 +89,17 @@ namespace Image2ASCII_UI
 
         private void multiplier_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image files | *.png"; // file types, that will be allowed to upload
+            dialog.Multiselect = false; // allow/deny user to upload more than one file at a time
+            if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
+            {
+                pathStr = dialog.FileName; // get name of file
+            }
         }
     }
 }
