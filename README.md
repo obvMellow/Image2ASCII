@@ -28,3 +28,6 @@ Optionally you can create a setup file with the publish wizard.
 - Multiple file support
 - Multiplatform support
 - UI version
+
+## Known Issues
+- Nonsense results on high quality images. (Try decreasing Size Multiplier)
