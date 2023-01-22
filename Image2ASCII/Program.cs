@@ -46,7 +46,7 @@ namespace Image2ASCII
 
                 if (!File.Exists(input) || input == "")
                 {
-                    PrintlnColored("[ERROR] Input file doesn't exitst!", ConsoleColor.Red, (1, 6));
+                    PrintlnColored("[ERROR] Input file doesn't exists!", ConsoleColor.Red, (1, 6));
                     continue;
                 }
 
